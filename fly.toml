@@ -1,0 +1,19 @@
+app = "toiletbot"   # must match your app name on Fly.io
+
+[build]
+  # Use Python 3.10 image
+  image = "python:3.10"
+
+[env]
+  PYTHONUNBUFFERED = "1"
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+
+[experimental]
+  cmd = ["python", "toilet_bot.py"]
