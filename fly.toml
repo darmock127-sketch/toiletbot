@@ -1,7 +1,7 @@
 app = "toiletbot"
 
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = "./Dockerfile"
 
 [env]
   PYTHONUNBUFFERED = "true"
